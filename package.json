@@ -1,0 +1,16 @@
+{
+  "name": "authz-extension-automation-sample",
+  "description": "Sample tool showing how you can provision groups, roles and permissions with the Authorization Extension API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Auth0",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "chalk": "^1.1.3",
+    "dotenv": "^2.0.0",
+    "lodash": "^4.17.2",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}

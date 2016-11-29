@@ -1,0 +1,155 @@
+{
+  "applications": [
+    {
+      "id": "timesheet-app-id",
+      "permissions": [
+        "read:own-timesheets",
+        "update:own-timesheets",
+        "read:timesheets",
+        "update:timesheets",
+        "approve:timesheets",
+        "reject:timesheets"
+      ],
+      "roles": [
+        {
+          "name": "Timesheet User",
+          "description": "Role given to contractors",
+          "permissions": [
+            "read:own-timesheets",
+            "update:own-timesheets"
+          ]
+        },
+        {
+          "name": "Timesheet Manager",
+          "description": "Role given to users that can manage timesheets",
+          "permissions": [
+            "read:timesheets",
+            "update:timesheets",
+            "approve:timesheets",
+            "reject:timesheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expense-app-id",
+      "permissions": [
+        "read:own-receipts",
+        "update:own-receipts",
+        "update:delete-receipts",
+        "read:own-reports",
+        "update:own-reports",
+        "delete:own-reports",
+        "submit:own-reports",
+        "read:receipts",
+        "read:reports",
+        "approve:reports",
+        "delete:reports",
+        "update:reports",
+        "reject:reports"
+      ],
+      "roles": [
+        {
+          "name": "Expense User",
+          "description": "Role given to employees",
+          "permissions": [
+            "read:own-receipts",
+            "update:own-receipts",
+            "update:delete-receipts",
+            "read:own-reports",
+            "update:own-reports",
+            "delete:own-reports",
+            "submit:own-reports"
+          ]
+        },
+        {
+          "name": "Expense Manager",
+          "description": "Role given to users that can manage expenses",
+          "permissions": [
+            "read:receipts",
+            "read:reports",
+            "approve:reports",
+            "reject:reports"
+          ]
+        },
+        {
+          "name": "Expense Admins",
+          "description": "Role given to users that can delete and update reports",
+          "permissions": [
+            "delete:reports",
+            "update:reports"
+          ]
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "name": "Engineering"
+    },
+    {
+      "name": "Research & Development",
+      "nested": [
+        "Engineering"
+      ]
+    },
+    {
+      "name": "Production & Quality"
+    },
+    {
+      "name": "Distribution"
+    },
+    {
+      "name": "IT Support"
+    },
+    {
+      "name": "IT",
+      "nested": [
+        "IT Support"
+      ]
+    },
+    {
+      "name": "Logistics"
+    },
+    {
+      "name": "Sales"
+    },
+    {
+      "name": "Finance"
+    },
+    {
+      "name": "Advertising"
+    },
+    {
+      "name": "Public Relations"
+    },
+    {
+      "name": "Marketing",
+      "nested": [
+        "Advertising",
+        "Public Relations"
+      ]
+    },
+    {
+      "name": "Purchasing"
+    },
+    {
+      "name": "Management Consultancy"
+    },
+    {
+      "name": "Accounting",
+      "nested": [
+        "Management Consultancy"
+      ]
+    },
+    {
+      "name": "Recruitment Consultancy"
+    },
+    {
+      "name": "HR",
+      "nested": [
+        "Recruitment Consultancy"
+      ]
+    }
+  ]
+}
