@@ -6,7 +6,7 @@ This sample tool shows how you can provision groups, roles and permissions in th
 
 In the extension go to the **API** section and enable API access:
 
-![](/screenshots/configure-extension.png)
+![](/screenshots/configure-extension-api.png)
 
 After saving this page an API (Resource Server) will be created in your Auth0 account.
 
